@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /Users/yummycarrot/Documents/Verilog/AZPR/Bus/testbench
+cd /Users/yummycarrot/Documents/Verilog/AZPR_SoC/Bus/testbench
 open -a Scansion bus_arbiter.vcd
