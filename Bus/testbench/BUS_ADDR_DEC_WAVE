@@ -1,0 +1,3 @@
+#!/bin/bash
+cd .
+open -a Scansion bus_addr_dec.vcd
