@@ -22,7 +22,7 @@
 
     /*  bus slave index bus  */
     `define BUS_SLAVE_INDEX_BUS     (`BUS_SLAVE_INDEX_WIDTH-1):`LSB
-    //  ??? why ???
+    /*  bus slave index map to address bus */
     `define BUS_SLAVE_INDEX_LOC     29:27
 
     /*  bus slave  */

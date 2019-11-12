@@ -1,0 +1,156 @@
+$date
+	Mon Nov 11 22:33:12 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module bus_master_mux_tb $end
+$var wire 32 ! s_wr_data [31:0] $end
+$var wire 1 " s_rw $end
+$var wire 1 # s_as_n $end
+$var wire 30 $ s_addr [29:0] $end
+$var reg 30 % m0_addr [29:0] $end
+$var reg 1 & m0_as_n $end
+$var reg 1 ' m0_grnt_n $end
+$var reg 1 ( m0_rw $end
+$var reg 32 ) m0_wr_data [31:0] $end
+$var reg 30 * m1_addr [29:0] $end
+$var reg 1 + m1_as_n $end
+$var reg 1 , m1_grnt_n $end
+$var reg 1 - m1_rw $end
+$var reg 32 . m1_wr_data [31:0] $end
+$var reg 30 / m2_addr [29:0] $end
+$var reg 1 0 m2_as_n $end
+$var reg 1 1 m2_grnt_n $end
+$var reg 1 2 m2_rw $end
+$var reg 32 3 m2_wr_data [31:0] $end
+$var reg 30 4 m3_addr [29:0] $end
+$var reg 1 5 m3_as_n $end
+$var reg 1 6 m3_grnt_n $end
+$var reg 1 7 m3_rw $end
+$var reg 32 8 m3_wr_data [31:0] $end
+$scope module bus_master_mux_01 $end
+$var wire 30 9 m0_addr [29:0] $end
+$var wire 1 & m0_as_n $end
+$var wire 1 ' m0_grnt_n $end
+$var wire 1 ( m0_rw $end
+$var wire 32 : m0_wr_data [31:0] $end
+$var wire 30 ; m1_addr [29:0] $end
+$var wire 1 + m1_as_n $end
+$var wire 1 , m1_grnt_n $end
+$var wire 1 - m1_rw $end
+$var wire 32 < m1_wr_data [31:0] $end
+$var wire 30 = m2_addr [29:0] $end
+$var wire 1 0 m2_as_n $end
+$var wire 1 1 m2_grnt_n $end
+$var wire 1 2 m2_rw $end
+$var wire 32 > m2_wr_data [31:0] $end
+$var wire 30 ? m3_addr [29:0] $end
+$var wire 1 5 m3_as_n $end
+$var wire 1 6 m3_grnt_n $end
+$var wire 1 7 m3_rw $end
+$var wire 32 @ m3_wr_data [31:0] $end
+$var reg 30 A s_addr [29:0] $end
+$var reg 1 # s_as_n $end
+$var reg 1 " s_rw $end
+$var reg 32 B s_wr_data [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 B
+b0 A
+b111100010010000 @
+b1111000 ?
+b101011001111000 >
+b1010110 =
+b11010001010110 <
+b110100 ;
+b1001000110100 :
+b10010 9
+b111100010010000 8
+17
+16
+15
+b1111000 4
+b101011001111000 3
+02
+11
+10
+b1010110 /
+b11010001010110 .
+1-
+1,
+0+
+b110100 *
+b1001000110100 )
+0(
+1'
+0&
+b10010 %
+b0 $
+1#
+1"
+b0 !
+$end
+#500
+b1001000110100 !
+b1001000110100 B
+0"
+0#
+b10010 $
+b10010 A
+0'
+#1000
+b0 !
+b0 B
+1"
+1#
+b0 $
+b0 A
+1'
+#1500
+b11010001010110 !
+b11010001010110 B
+0#
+b110100 $
+b110100 A
+0,
+#2000
+b0 !
+b0 B
+1#
+b0 $
+b0 A
+1,
+#2500
+b101011001111000 !
+b101011001111000 B
+0"
+b1010110 $
+b1010110 A
+01
+#3000
+b0 !
+b0 B
+1"
+b0 $
+b0 A
+11
+#3500
+b111100010010000 !
+b111100010010000 B
+b1111000 $
+b1111000 A
+06
+#4000
+b0 !
+b0 B
+b0 $
+b0 A
+16
+#5000
