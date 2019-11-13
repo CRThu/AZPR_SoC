@@ -7,7 +7,7 @@ module rom(
     output reg [`WORD_DATA_BUS] dout
 );
 
-    reg [`WORD_DATA_BUS] rom_block [`ROM_SIZE-1:0];
+    reg [`WORD_DATA_BUS] rom_block [`ROM_SIZE/4-1:0];
 
     always @(posedge clk)
     begin

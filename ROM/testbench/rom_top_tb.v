@@ -7,7 +7,7 @@ module rom_top_tb;
 
     /*  clock & reset  */
     reg clk = `LOW;
-    reg reset = `RESET_DISABLE;
+    reg reset = `RESET_ENABLE;
 
     /*  bus  */
     reg cs_n = `DISABLE_;
@@ -40,7 +40,7 @@ module rom_top_tb;
         $dumpfile("rom_top.vcd");
         $dumpvars(0,rom_top_tb);
         
-        #50 reset = `RESET_ENABLE;
+        #50 reset = `RESET_DISABLE;
         cs_n  = `ENABLE_;
         as_n = `ENABLE_;
         

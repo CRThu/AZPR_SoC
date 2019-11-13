@@ -22,7 +22,7 @@ rom rom_01(
 );
 
 always @(posedge clk or `RESET_EDGE reset) begin
-    if(reset == `RESET_DISABLE)     // book is wrong???
+    if(reset == `RESET_ENABLE)
     begin
         rdy_n <= #1 `DISABLE_;
     end
