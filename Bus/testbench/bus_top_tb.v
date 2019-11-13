@@ -7,7 +7,7 @@ module bus_top_tb;
 
     /*  clock & reset  */
     reg clk = `LOW;
-    reg reset = `RESET_DISABLE;
+    reg reset = `RESET_ENABLE;
 
     /*  master 0-3  */
     reg m0_req_n = `DISABLE_;
@@ -163,11 +163,11 @@ module bus_top_tb;
         $dumpvars(0,bus_top_tb);
 
         // test for reset
-        #50 reset = `RESET_ENABLE;
-        #50 m3_req_n = `ENABLE_;
         #50 reset = `RESET_DISABLE;
-        #50 m3_req_n = `DISABLE_;
+        #50 m3_req_n = `ENABLE_;
         #50 reset = `RESET_ENABLE;
+        #50 m3_req_n = `DISABLE_;
+        #50 reset = `RESET_DISABLE;
 
 
         // m0 request usage of bus

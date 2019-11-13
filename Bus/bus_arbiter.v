@@ -41,7 +41,7 @@ module bus_arbiter(
     /*  arbiter of usage of bus  */
     always@(posedge clk or `RESET_EDGE reset)
     begin
-        if (reset == `RESET_DISABLE)    // book is wrong ???
+        if (reset == `RESET_ENABLE)
         begin
             /*  reset  */
             owner <= #1 `BUS_OWNER_MASTER_0;

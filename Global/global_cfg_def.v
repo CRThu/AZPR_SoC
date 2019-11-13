@@ -15,14 +15,15 @@
     // `define IMPLEMENT_GPIO
 
     /*  generate RESET_ENABLE & RESET_DISABLE & RESET_EDGE */
+    // book is wrong???
     // `ifdef POSITIVE_RESET
     //     `define RESET_EDGE      posedge
-    //     `define RESET_ENABLE    1'b1
-    //     `define RESET_DISABLE   1'b0
+    //     `define RESET_ENABLE    1'b0
+    //     `define RESET_DISABLE   1'b1
     // `elif NEGATIVE_RESET
         `define RESET_EDGE      negedge
-        `define RESET_ENABLE    1'b0
-        `define RESET_DISABLE   1'b1
+        `define RESET_ENABLE    1'b1
+        `define RESET_DISABLE   1'b0
     // `endif
     
 
