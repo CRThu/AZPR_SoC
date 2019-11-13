@@ -1,0 +1,544 @@
+$date
+	Wed Nov 13 09:07:09 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module bus_top_tb $end
+$var wire 32 ! s_wr_data [31:0] $end
+$var wire 1 " s_rw $end
+$var wire 1 # s_as_n $end
+$var wire 30 $ s_addr [29:0] $end
+$var wire 1 % s7_cs_n $end
+$var wire 1 & s6_cs_n $end
+$var wire 1 ' s5_cs_n $end
+$var wire 1 ( s4_cs_n $end
+$var wire 1 ) s3_cs_n $end
+$var wire 1 * s2_cs_n $end
+$var wire 1 + s1_cs_n $end
+$var wire 1 , s0_cs_n $end
+$var wire 1 - m_rdy_n $end
+$var wire 32 . m_rd_data [31:0] $end
+$var wire 1 / m3_grnt_n $end
+$var wire 1 0 m2_grnt_n $end
+$var wire 1 1 m1_grnt_n $end
+$var wire 1 2 m0_grnt_n $end
+$var reg 1 3 clk $end
+$var reg 30 4 m0_addr [29:0] $end
+$var reg 1 5 m0_as_n $end
+$var reg 1 6 m0_req_n $end
+$var reg 1 7 m0_rw $end
+$var reg 32 8 m0_wr_data [31:0] $end
+$var reg 30 9 m1_addr [29:0] $end
+$var reg 1 : m1_as_n $end
+$var reg 1 ; m1_req_n $end
+$var reg 1 < m1_rw $end
+$var reg 32 = m1_wr_data [31:0] $end
+$var reg 30 > m2_addr [29:0] $end
+$var reg 1 ? m2_as_n $end
+$var reg 1 @ m2_req_n $end
+$var reg 1 A m2_rw $end
+$var reg 32 B m2_wr_data [31:0] $end
+$var reg 30 C m3_addr [29:0] $end
+$var reg 1 D m3_as_n $end
+$var reg 1 E m3_req_n $end
+$var reg 1 F m3_rw $end
+$var reg 32 G m3_wr_data [31:0] $end
+$var reg 1 H reset $end
+$var reg 32 I s0_rd_data [31:0] $end
+$var reg 1 J s0_rdy_n $end
+$var reg 32 K s1_rd_data [31:0] $end
+$var reg 1 L s1_rdy_n $end
+$var reg 32 M s2_rd_data [31:0] $end
+$var reg 1 N s2_rdy_n $end
+$var reg 32 O s3_rd_data [31:0] $end
+$var reg 1 P s3_rdy_n $end
+$var reg 32 Q s4_rd_data [31:0] $end
+$var reg 1 R s4_rdy_n $end
+$var reg 32 S s5_rd_data [31:0] $end
+$var reg 1 T s5_rdy_n $end
+$var reg 32 U s6_rd_data [31:0] $end
+$var reg 1 V s6_rdy_n $end
+$var reg 32 W s7_rd_data [31:0] $end
+$var reg 1 X s7_rdy_n $end
+$scope module bus_top_01 $end
+$var wire 1 3 clk $end
+$var wire 30 Y m0_addr [29:0] $end
+$var wire 1 5 m0_as_n $end
+$var wire 1 6 m0_req_n $end
+$var wire 1 7 m0_rw $end
+$var wire 32 Z m0_wr_data [31:0] $end
+$var wire 30 [ m1_addr [29:0] $end
+$var wire 1 : m1_as_n $end
+$var wire 1 ; m1_req_n $end
+$var wire 1 < m1_rw $end
+$var wire 32 \ m1_wr_data [31:0] $end
+$var wire 30 ] m2_addr [29:0] $end
+$var wire 1 ? m2_as_n $end
+$var wire 1 @ m2_req_n $end
+$var wire 1 A m2_rw $end
+$var wire 32 ^ m2_wr_data [31:0] $end
+$var wire 30 _ m3_addr [29:0] $end
+$var wire 1 D m3_as_n $end
+$var wire 1 E m3_req_n $end
+$var wire 1 F m3_rw $end
+$var wire 32 ` m3_wr_data [31:0] $end
+$var wire 1 H reset $end
+$var wire 32 a s0_rd_data [31:0] $end
+$var wire 1 J s0_rdy_n $end
+$var wire 32 b s1_rd_data [31:0] $end
+$var wire 1 L s1_rdy_n $end
+$var wire 32 c s2_rd_data [31:0] $end
+$var wire 1 N s2_rdy_n $end
+$var wire 32 d s3_rd_data [31:0] $end
+$var wire 1 P s3_rdy_n $end
+$var wire 32 e s4_rd_data [31:0] $end
+$var wire 1 R s4_rdy_n $end
+$var wire 32 f s5_rd_data [31:0] $end
+$var wire 1 T s5_rdy_n $end
+$var wire 32 g s6_rd_data [31:0] $end
+$var wire 1 V s6_rdy_n $end
+$var wire 32 h s7_rd_data [31:0] $end
+$var wire 1 X s7_rdy_n $end
+$var wire 32 i s_wr_data [31:0] $end
+$var wire 1 " s_rw $end
+$var wire 1 # s_as_n $end
+$var wire 30 j s_addr [29:0] $end
+$var wire 1 % s7_cs_n $end
+$var wire 1 & s6_cs_n $end
+$var wire 1 ' s5_cs_n $end
+$var wire 1 ( s4_cs_n $end
+$var wire 1 ) s3_cs_n $end
+$var wire 1 * s2_cs_n $end
+$var wire 1 + s1_cs_n $end
+$var wire 1 , s0_cs_n $end
+$var wire 1 - m_rdy_n $end
+$var wire 32 k m_rd_data [31:0] $end
+$var wire 1 / m3_grnt_n $end
+$var wire 1 0 m2_grnt_n $end
+$var wire 1 1 m1_grnt_n $end
+$var wire 1 2 m0_grnt_n $end
+$scope module bus_addr_dec_01 $end
+$var wire 3 l s_index [2:0] $end
+$var wire 30 m s_addr [29:0] $end
+$var reg 1 , s0_cs_n $end
+$var reg 1 + s1_cs_n $end
+$var reg 1 * s2_cs_n $end
+$var reg 1 ) s3_cs_n $end
+$var reg 1 ( s4_cs_n $end
+$var reg 1 ' s5_cs_n $end
+$var reg 1 & s6_cs_n $end
+$var reg 1 % s7_cs_n $end
+$upscope $end
+$scope module bus_arbiter_01 $end
+$var wire 1 3 clk $end
+$var wire 1 6 m0_req_n $end
+$var wire 1 ; m1_req_n $end
+$var wire 1 @ m2_req_n $end
+$var wire 1 E m3_req_n $end
+$var wire 1 H reset $end
+$var reg 1 2 m0_grnt_n $end
+$var reg 1 1 m1_grnt_n $end
+$var reg 1 0 m2_grnt_n $end
+$var reg 1 / m3_grnt_n $end
+$var reg 2 n owner [1:0] $end
+$upscope $end
+$scope module bus_master_mux_01 $end
+$var wire 30 o m0_addr [29:0] $end
+$var wire 1 5 m0_as_n $end
+$var wire 1 2 m0_grnt_n $end
+$var wire 1 7 m0_rw $end
+$var wire 32 p m0_wr_data [31:0] $end
+$var wire 30 q m1_addr [29:0] $end
+$var wire 1 : m1_as_n $end
+$var wire 1 1 m1_grnt_n $end
+$var wire 1 < m1_rw $end
+$var wire 32 r m1_wr_data [31:0] $end
+$var wire 30 s m2_addr [29:0] $end
+$var wire 1 ? m2_as_n $end
+$var wire 1 0 m2_grnt_n $end
+$var wire 1 A m2_rw $end
+$var wire 32 t m2_wr_data [31:0] $end
+$var wire 30 u m3_addr [29:0] $end
+$var wire 1 D m3_as_n $end
+$var wire 1 / m3_grnt_n $end
+$var wire 1 F m3_rw $end
+$var wire 32 v m3_wr_data [31:0] $end
+$var reg 30 w s_addr [29:0] $end
+$var reg 1 # s_as_n $end
+$var reg 1 " s_rw $end
+$var reg 32 x s_wr_data [31:0] $end
+$upscope $end
+$scope module bus_slave_mux_01 $end
+$var wire 1 , s0_cs_n $end
+$var wire 32 y s0_rd_data [31:0] $end
+$var wire 1 J s0_rdy_n $end
+$var wire 1 + s1_cs_n $end
+$var wire 32 z s1_rd_data [31:0] $end
+$var wire 1 L s1_rdy_n $end
+$var wire 1 * s2_cs_n $end
+$var wire 32 { s2_rd_data [31:0] $end
+$var wire 1 N s2_rdy_n $end
+$var wire 1 ) s3_cs_n $end
+$var wire 32 | s3_rd_data [31:0] $end
+$var wire 1 P s3_rdy_n $end
+$var wire 1 ( s4_cs_n $end
+$var wire 32 } s4_rd_data [31:0] $end
+$var wire 1 R s4_rdy_n $end
+$var wire 1 ' s5_cs_n $end
+$var wire 32 ~ s5_rd_data [31:0] $end
+$var wire 1 T s5_rdy_n $end
+$var wire 1 & s6_cs_n $end
+$var wire 32 !" s6_rd_data [31:0] $end
+$var wire 1 V s6_rdy_n $end
+$var wire 1 % s7_cs_n $end
+$var wire 32 "" s7_rd_data [31:0] $end
+$var wire 1 X s7_rdy_n $end
+$var reg 32 #" m_rd_data [31:0] $end
+$var reg 1 - m_rdy_n $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx #"
+bx ""
+bx !"
+bx ~
+bx }
+bx |
+bx {
+bx z
+bx y
+b0 x
+b0 w
+bx v
+bx u
+bx t
+bx s
+bx r
+bx q
+bx p
+bx o
+bx n
+b0 m
+b0 l
+bx k
+b0 j
+b0 i
+bx h
+bx g
+bx f
+bx e
+bx d
+bx c
+bx b
+bx a
+bx `
+bx _
+bx ^
+bx ]
+bx \
+bx [
+bx Z
+bx Y
+1X
+bx W
+1V
+bx U
+1T
+bx S
+1R
+bx Q
+1P
+bx O
+1N
+bx M
+1L
+bx K
+1J
+bx I
+1H
+bx G
+xF
+1E
+1D
+bx C
+bx B
+xA
+1@
+1?
+bx >
+bx =
+x<
+1;
+1:
+bx 9
+bx 8
+x7
+16
+15
+bx 4
+03
+x2
+x1
+x0
+x/
+bx .
+1-
+0,
+1+
+1*
+1)
+1(
+1'
+1&
+1%
+b0 $
+1#
+1"
+b0 !
+$end
+#100
+13
+#110
+b0 .
+b0 k
+b0 #"
+1,
+bx l
+bx !
+bx i
+bx x
+x"
+bx $
+bx j
+bx m
+bx w
+1/
+10
+11
+02
+b0 n
+#200
+03
+#300
+13
+#400
+03
+#500
+13
+0H
+#600
+03
+#700
+13
+#800
+03
+#900
+13
+#1000
+03
+0E
+#1100
+13
+#1110
+0/
+12
+b11 n
+#1200
+03
+#1300
+13
+#1400
+03
+#1500
+13
+1H
+#1510
+02
+1/
+b0 n
+#1600
+03
+#1700
+13
+#1800
+03
+#1900
+13
+#2000
+03
+1E
+#2100
+13
+#2200
+03
+#2300
+13
+#2400
+03
+#2500
+13
+0H
+#2600
+03
+#2700
+13
+#2800
+03
+#2900
+13
+#3000
+03
+#3100
+13
+#3200
+03
+#3300
+13
+#3400
+03
+#3500
+bx .
+bx k
+bx #"
+0*
+b10 l
+b1001000110100 !
+b1001000110100 i
+b1001000110100 x
+0"
+0#
+b10000000000000000000000000000 $
+b10000000000000000000000000000 j
+b10000000000000000000000000000 m
+b10000000000000000000000000000 w
+13
+b1001000110100 8
+b1001000110100 Z
+b1001000110100 p
+07
+05
+b10000000000000000000000000000 4
+b10000000000000000000000000000 Y
+b10000000000000000000000000000 o
+06
+#3600
+03
+#3700
+13
+#3800
+03
+#3900
+13
+#4000
+03
+#4100
+13
+#4200
+03
+#4300
+13
+#4400
+03
+#4500
+1#
+13
+0X
+b101011001111000 W
+b101011001111000 h
+b101011001111000 ""
+1<
+0:
+b111111000000000000000000000000 9
+b111111000000000000000000000000 [
+b111111000000000000000000000000 q
+0;
+15
+#4600
+03
+#4700
+13
+#4800
+03
+#4900
+13
+#5000
+03
+#5100
+13
+#5200
+03
+#5300
+13
+#5400
+03
+#5500
+13
+16
+1X
+1:
+#5510
+b101011001111000 .
+b101011001111000 k
+b101011001111000 #"
+0%
+1*
+b111 l
+bx !
+bx i
+bx x
+1"
+b111111000000000000000000000000 $
+b111111000000000000000000000000 j
+b111111000000000000000000000000 m
+b111111000000000000000000000000 w
+01
+12
+b1 n
+#5600
+03
+#5700
+13
+#5800
+03
+#5900
+13
+#6000
+03
+#6100
+13
+#6200
+03
+#6300
+13
+#6400
+03
+#6500
+13
+1;
+#6600
+03
+#6700
+13
+#6800
+03
+#6900
+13
+#7000
+03
+#7100
+13
+#7200
+03
+#7300
+13
+#7400
+03
+#7500
+13

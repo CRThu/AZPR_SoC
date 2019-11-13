@@ -45,35 +45,35 @@ module bus_top(
     output wire m_rdy_n,
 
     /*  slave 0-7  */
-    input wire s0_cs_n,
+    output wire s0_cs_n,
     input wire [`WORD_DATA_BUS] s0_rd_data,
     input wire s0_rdy_n,
 
-    input wire s1_cs_n,
+    output wire s1_cs_n,
     input wire [`WORD_DATA_BUS] s1_rd_data,
     input wire s1_rdy_n,
 
-    input wire s2_cs_n,
+    output wire s2_cs_n,
     input wire [`WORD_DATA_BUS] s2_rd_data,
     input wire s2_rdy_n,
     
-    input wire s3_cs_n,
+    output wire s3_cs_n,
     input wire [`WORD_DATA_BUS] s3_rd_data,
     input wire s3_rdy_n,
     
-    input wire s4_cs_n,
+    output wire s4_cs_n,
     input wire [`WORD_DATA_BUS] s4_rd_data,
     input wire s4_rdy_n,
     
-    input wire s5_cs_n,
+    output wire s5_cs_n,
     input wire [`WORD_DATA_BUS] s5_rd_data,
     input wire s5_rdy_n,
     
-    input wire s6_cs_n,
+    output wire s6_cs_n,
     input wire [`WORD_DATA_BUS] s6_rd_data,
     input wire s6_rdy_n,
     
-    input wire s7_cs_n,
+    output wire s7_cs_n,
     input wire [`WORD_DATA_BUS] s7_rd_data,
     input wire s7_rdy_n,
 

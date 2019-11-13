@@ -1,0 +1,52 @@
+#!/bin/bash
+# if perrmission denied, use:
+# chmod 777 COMPILE
+
+TOP_FILENAME="bus_top"
+TB_FILENAME="bus_top_tb"
+
+VVP_FILENAME="${TOP_FILENAME}"
+VCD_FILENAME="${TOP_FILENAME}"
+INC_DIR="../../"
+
+SHELL_FOLDER=$(dirname "$0")
+TOP_FILENAME_UPPER=$(echo $TOP_FILENAME|tr '[a-z]' '[A-Z]')
+
+cd ${SHELL_FOLDER}
+
+echo "Dir:${SHELL_FOLDER};"
+echo -e "Top:${TOP_FILENAME};\tTestbench:${TB_FILENAME};"
+echo "iverlog executing..."
+
+iverilog -I ${INC_DIR} -o ${VVP_FILENAME}.vvp ${TB_FILENAME}.v
+./${VVP_FILENAME}.vvp
+
+if [ -f "${VCD_FILENAME}.vcd" ];then
+    echo "Found the vcd file: ${VCD_FILENAME}.vcd"
+    # generate WAVE shell
+    echo -e "#!/bin/bash\ncd ${SHELL_FOLDER}\nopen -a Scansion ${VCD_FILENAME}.vcd" > ${TOP_FILENAME_UPPER}_WAVE
+    chmod 777 ${TOP_FILENAME_UPPER}_WAVE
+
+    echo "Press Y or Enter to watch the wave or others to exit:"
+    read -n 1 -s key
+    if [ -z "${key}" ];then
+        # read null == true (press enter)
+        EXEC_WAVE=1
+    else
+        # press Y/y
+        if [ ${key} = Y -o ${key} = y ];then
+            EXEC_WAVE=1
+        else
+            EXEC_WAVE=0
+        fi
+    fi
+    if [ ${EXEC_WAVE} = 1 ];then
+        echo "Executing ./${TOP_FILENAME_UPPER}_WAVE to watch the wave."
+        ./${TOP_FILENAME_UPPER}_WAVE
+    else
+        echo "Script has been generated and you can use ./${TOP_FILENAME_UPPER}_WAVE to watch the wave later."
+    fi
+else
+    echo "Can not found the vcd file."
+fi
+echo "Compile completed."
