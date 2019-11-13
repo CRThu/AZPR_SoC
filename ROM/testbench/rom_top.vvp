@@ -1,0 +1,161 @@
+#! /usr/local/Cellar/icarus-verilog/10.3/bin/vvp
+:ivl_version "10.3 (stable)" "(v10_3)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 10;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7fab0cd02620 .scope module, "rom_top_tb" "rom_top_tb" 2 6;
+ .timescale -9 -10;
+v0x7fab0cd1dac0_0 .var "addr", 10 0;
+v0x7fab0cd1db70_0 .var "as_n", 0 0;
+v0x7fab0cd1dc10_0 .var "clk", 0 0;
+v0x7fab0cd1dd00_0 .var "cs_n", 0 0;
+v0x7fab0cd1dd90_0 .net "rd_data", 31 0, v0x7fab0cd1d2f0_0;  1 drivers
+v0x7fab0cd1dea0_0 .net "rdy_n", 0 0, v0x7fab0cd1d8e0_0;  1 drivers
+v0x7fab0cd1df30_0 .var "reset", 0 0;
+S_0x7fab0cd00140 .scope module, "rom_top_01" "rom_top" 2 19, 3 5 0, S_0x7fab0cd02620;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "clk"
+    .port_info 1 /INPUT 1 "reset"
+    .port_info 2 /INPUT 1 "cs_n"
+    .port_info 3 /INPUT 1 "as_n"
+    .port_info 4 /INPUT 11 "addr"
+    .port_info 5 /OUTPUT 32 "rd_data"
+    .port_info 6 /OUTPUT 1 "rdy_n"
+v0x7fab0cd1d570_0 .net "addr", 10 0, v0x7fab0cd1dac0_0;  1 drivers
+v0x7fab0cd1d620_0 .net "as_n", 0 0, v0x7fab0cd1db70_0;  1 drivers
+v0x7fab0cd1d6b0_0 .net "clk", 0 0, v0x7fab0cd1dc10_0;  1 drivers
+v0x7fab0cd1d780_0 .net "cs_n", 0 0, v0x7fab0cd1dd00_0;  1 drivers
+v0x7fab0cd1d810_0 .net "rd_data", 31 0, v0x7fab0cd1d2f0_0;  alias, 1 drivers
+v0x7fab0cd1d8e0_0 .var "rdy_n", 0 0;
+v0x7fab0cd1d970_0 .net "reset", 0 0, v0x7fab0cd1df30_0;  1 drivers
+E_0x7fab0cd056e0/0 .event negedge, v0x7fab0cd1d970_0;
+E_0x7fab0cd056e0/1 .event posedge, v0x7fab0cd1d250_0;
+E_0x7fab0cd056e0 .event/or E_0x7fab0cd056e0/0, E_0x7fab0cd056e0/1;
+S_0x7fab0cd0d550 .scope module, "rom_01" "rom" 3 18, 4 4 0, S_0x7fab0cd00140;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "clk"
+    .port_info 1 /INPUT 11 "addr"
+    .port_info 2 /OUTPUT 32 "dout"
+v0x7fab0cd04e10_0 .net "addr", 10 0, v0x7fab0cd1dac0_0;  alias, 1 drivers
+v0x7fab0cd1d250_0 .net "clk", 0 0, v0x7fab0cd1dc10_0;  alias, 1 drivers
+v0x7fab0cd1d2f0_0 .var "dout", 31 0;
+v0x7fab0cd1d3b0_0 .var/i "i", 31 0;
+v0x7fab0cd1d460 .array "rom_block", 0 8191, 31 0;
+E_0x7fab0cd061a0 .event posedge, v0x7fab0cd1d250_0;
+    .scope S_0x7fab0cd0d550;
+T_0 ;
+    %wait E_0x7fab0cd061a0;
+    %load/vec4 v0x7fab0cd04e10_0;
+    %pad/u 15;
+    %ix/vec4 4;
+    %load/vec4a v0x7fab0cd1d460, 4;
+    %assign/vec4 v0x7fab0cd1d2f0_0, 0;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x7fab0cd0d550;
+T_1 ;
+    %vpi_call 4 20 "$readmemh", "./rom_tb.dat", v0x7fab0cd1d460 {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x7fab0cd1d3b0_0, 0, 32;
+T_1.0 ;
+    %load/vec4 v0x7fab0cd1d3b0_0;
+    %cmpi/s 10, 0, 32;
+    %jmp/0xz T_1.1, 5;
+    %vpi_call 4 23 "$display", "addr = 0x%h,\011data = 0x%h;\012", v0x7fab0cd1d3b0_0, &A<v0x7fab0cd1d460, v0x7fab0cd1d3b0_0 > {0 0 0};
+    %load/vec4 v0x7fab0cd1d3b0_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %store/vec4 v0x7fab0cd1d3b0_0, 0, 32;
+    %jmp T_1.0;
+T_1.1 ;
+    %end;
+    .thread T_1;
+    .scope S_0x7fab0cd00140;
+T_2 ;
+    %wait E_0x7fab0cd056e0;
+    %load/vec4 v0x7fab0cd1d970_0;
+    %cmpi/e 1, 0, 1;
+    %jmp/0xz  T_2.0, 4;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x7fab0cd1d8e0_0, 10;
+    %jmp T_2.1;
+T_2.0 ;
+    %load/vec4 v0x7fab0cd1d780_0;
+    %pushi/vec4 0, 0, 1;
+    %cmp/e;
+    %flag_get/vec4 4;
+    %load/vec4 v0x7fab0cd1d620_0;
+    %pushi/vec4 0, 0, 1;
+    %cmp/e;
+    %flag_get/vec4 4;
+    %and;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.2, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x7fab0cd1d8e0_0, 10;
+    %jmp T_2.3;
+T_2.2 ;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x7fab0cd1d8e0_0, 10;
+T_2.3 ;
+T_2.1 ;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0x7fab0cd02620;
+T_3 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fab0cd1dc10_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fab0cd1df30_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fab0cd1dd00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fab0cd1db70_0, 0, 1;
+    %pushi/vec4 0, 0, 11;
+    %store/vec4 v0x7fab0cd1dac0_0, 0, 11;
+    %end;
+    .thread T_3;
+    .scope S_0x7fab0cd02620;
+T_4 ;
+    %delay 100, 0;
+    %load/vec4 v0x7fab0cd1dc10_0;
+    %inv;
+    %store/vec4 v0x7fab0cd1dc10_0, 0, 1;
+    %jmp T_4;
+    .thread T_4;
+    .scope S_0x7fab0cd02620;
+T_5 ;
+    %vpi_call 2 40 "$dumpfile", "rom_top.vcd" {0 0 0};
+    %vpi_call 2 41 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x7fab0cd02620 {0 0 0};
+    %delay 500, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fab0cd1df30_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fab0cd1dd00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fab0cd1db70_0, 0, 1;
+T_5.0 ;
+    %load/vec4 v0x7fab0cd1dac0_0;
+    %pad/u 32;
+    %cmpi/u 10, 0, 32;
+    %jmp/0xz T_5.1, 5;
+    %delay 500, 0;
+    %load/vec4 v0x7fab0cd1dac0_0;
+    %addi 1, 0, 11;
+    %store/vec4 v0x7fab0cd1dac0_0, 0, 11;
+    %jmp T_5.0;
+T_5.1 ;
+    %delay 1000, 0;
+    %vpi_call 2 50 "$finish" {0 0 0};
+    %end;
+    .thread T_5;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "rom_top_tb.v";
+    "../..//./ROM/rom_top.v";
+    "../..//./ROM/rom.v";

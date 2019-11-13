@@ -1,0 +1,3 @@
+#!/bin/bash
+cd .
+open -a Scansion rom_top.vcd
