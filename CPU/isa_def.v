@@ -3,14 +3,51 @@
 
         `include "./Global/global_std_def.v"
 
-        `define ISA_NOP         32'h0
+        `define ISA_NOP             32'h0
 
         /*  ISA OP Bus  */
-        `define ISA_OP_WIDTH    6
-        `define ISA_OP_BUS      (`ISA_OP_WIDTH-1):`LSB
-        `define ISA_OP_LOC      31:26
+        `define ISA_OP_WIDTH        6
+        `define ISA_OP_BUS          (`ISA_OP_WIDTH-1):`LSB
+        `define ISA_OP_LOC          31:26
 
         /*  ISA OP  */
+        /*  LOGIC
+         *  ISA_OP_ANDR     :   AND Register
+         *  ISA_OP_ANDI     :   AND Immediate
+         *  ISA_OP_ORR      :   OR Register
+         *  ISA_OP_ORI      :   OR Immediate
+         *  ISA_OP_XORR     :   XOR Register
+         *  ISA_OP_XORI     :   XOR Immediate
+         *  MATH
+         *  ISA_OP_ADDSR    :   ADD Signed Register
+         *  ISA_OP_ADDSI    :   ADD Signed Immediate
+         *  ISA_OP_ADDUR    :   ADD Unsigned Register
+         *  ISA_OP_ADDUI    :   ADD Unsigned Immediate
+         *  ISA_OP_SUBSR    :   SUB Signed Register
+         *  ISA_OP_SUBUR    :   SUB Unsigned Register
+         *  SHIFT
+         *  ISA_OP_SHRLR    :   SHIFT Right Register
+         *  ISA_OP_SHRLI    :   SHIFT Right Immediate
+         *  ISA_OP_SHLLR    :   SHIFT Left Register
+         *  ISA_OP_SHLLI    :   SHIFT Left Immediate
+         *  BRANCH
+         *  ISA_OP_BE       :   Branch Equal
+         *  ISA_OP_BNE      :   Branch Not Equal
+         *  ISA_OP_BSGT     :   Branch Signed Greater Than
+         *  ISA_OP_BUGT     :   Branch Unsigned Greater Than
+         *  JUMP
+         *  ISA_OP_JMP      :   JUMP
+         *  ISA_OP_CALL     :   CALL
+         *  MEMORY
+         *  ISA_OP_LDW      :   Load Word
+         *  ISA_OP_STW      :   Store Word
+         *  TRAP
+         *  ISA_OP_TRAP     :   TRAP
+         *  PRIVILEGE
+         *  ISA_OP_RDCR     :   Read Control Register
+         *  ISA_OP_WRCR     :   Write Control Register
+         *  ISA_OP_EXRT     :   Exception Return
+         */
         `define ISA_OP_ANDR         6'h00
         `define ISA_OP_ANDI         6'h01
         `define ISA_OP_ORR          6'h02
@@ -59,6 +96,15 @@
         `define ISA_EXP_BUS         (`ISA_EXP_WIDTH-1):`LSB
 
         /*  ISA EXP  */
+        /*
+         *  ISA_EXP_NO_EXP      :   No Exception
+         *  ISA_EXP_EXT_INT     :   External Interrupt
+         *  ISA_EXP_UNDEF_INSN  :   Undefined Instruction
+         *  ISA_EXP_OVERFLOW    :   Math Overflow
+         *  ISA_EXP_MISS_ALIGN  :   Memory not aligned
+         *  ISA_EXP_TRAP        :   TRAP throw Exception
+         *  ISA_EXP_PRV_VIO     :   Privilege Violation
+         */
         `define ISA_EXP_NO_EXP      3'h0
         `define ISA_EXP_EXT_INT     3'h1
         `define ISA_EXP_UNDEF_INSN  3'h2

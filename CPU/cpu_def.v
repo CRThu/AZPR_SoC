@@ -16,6 +16,17 @@
         `define ALU_OP_BUS      (`ALU_OP_WIDTH-1):`LSB
 
         /*  ALU OP  */
+        /*  ALU_OP_NOP  :   No Operation
+         *  ALU_OP_AND  :   AND
+         *  ALU_OP_OR   :   OR
+         *  ALU_OP_XOR  :   XOR
+         *  ALU_OP_ADDS :   ADD signed
+         *  ALU_OP_ADDU :   ADD unsigned
+         *  ALU_OP_SUBS :   SUB signed
+         *  ALU_OP_SUBU :   SUB unsigned
+         *  ALU_OP_SHRL :   SHIFT right
+         *  ALU_OP_SHLL :   SHIFT left
+         */
         `define ALU_OP_NOP      4'h0
         `define ALU_OP_AND      4'h1
         `define ALU_OP_OR       4'h2
@@ -32,6 +43,10 @@
         `define MEM_OP_BUS      (`MEM_OP_WIDTH-1):`LSB
 
         /*  MEM OP  */
+        /*  MEM_OP_NOP  :   No Operation
+         *  MEM_OP_LDW  :   Load Word
+         *  MEM_OP_STW  :   Store Word
+         */
         `define MEM_OP_NOP      2'h0
         `define MEM_OP_LDW      2'h1
         `define MEM_OP_STW      2'h2
@@ -41,6 +56,10 @@
         `define CTRL_OP_BUS     (`CTRL_OP_WIDTH-1):`LSB
 
         /*  CTRL OP  */
+        /*  CTRL_OP_NOP     :   No Operation
+         *  CTRL_OP_WRCR    :   Write Control
+         *  CTRL_OP_EXRT    :   Exception Return
+         */
         `define CTRL_OP_NOP     2'h0
         `define CTRL_OP_WRCR    2'h1
         `define CTRL_OP_EXRT    2'h2
