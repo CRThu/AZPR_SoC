@@ -1,0 +1,229 @@
+$date
+	Thu Nov 14 16:04:37 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module cpu_spm_tb $end
+$var wire 32 ! mem_spm_rd_data [31:0] $end
+$var wire 32 " if_spm_rd_data [31:0] $end
+$var reg 1 # clk $end
+$var reg 12 $ if_spm_addr [11:0] $end
+$var reg 1 % if_spm_as_n $end
+$var reg 1 & if_spm_rw $end
+$var reg 32 ' if_spm_wr_data [31:0] $end
+$var reg 12 ( mem_spm_addr [11:0] $end
+$var reg 1 ) mem_spm_as_n $end
+$var reg 1 * mem_spm_rw $end
+$var reg 32 + mem_spm_wr_data [31:0] $end
+$var integer 32 , i [31:0] $end
+$scope module cpu_spm_01 $end
+$var wire 1 # clk $end
+$var wire 12 - if_spm_addr [11:0] $end
+$var wire 1 % if_spm_as_n $end
+$var wire 1 & if_spm_rw $end
+$var wire 32 . if_spm_wr_data [31:0] $end
+$var wire 12 / mem_spm_addr [11:0] $end
+$var wire 1 ) mem_spm_as_n $end
+$var wire 1 * mem_spm_rw $end
+$var wire 32 0 mem_spm_wr_data [31:0] $end
+$var wire 32 1 mem_spm_rd_data [31:0] $end
+$var wire 32 2 if_spm_rd_data [31:0] $end
+$var reg 1 3 wea $end
+$var reg 1 4 web $end
+$scope module dpram_01 $end
+$var wire 12 5 addra [11:0] $end
+$var wire 12 6 addrb [11:0] $end
+$var wire 1 # clka $end
+$var wire 1 # clkb $end
+$var wire 32 7 dina [31:0] $end
+$var wire 32 8 dinb [31:0] $end
+$var wire 1 3 wea $end
+$var wire 1 4 web $end
+$var reg 32 9 douta [31:0] $end
+$var reg 32 : doutb [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx :
+bx 9
+bx 8
+bx 7
+bx 6
+bx 5
+04
+03
+bx 2
+bx 1
+bx 0
+bx /
+bx .
+bx -
+b1000000000000 ,
+bx +
+1*
+1)
+bx (
+bx '
+1&
+1%
+bx $
+0#
+bx "
+bx !
+$end
+#100
+1#
+#200
+0#
+#300
+1#
+#400
+0#
+0)
+b0 (
+b0 /
+b0 6
+#500
+b0 !
+b0 1
+b0 :
+1#
+#600
+0#
+#700
+1#
+#800
+0#
+#900
+b0 "
+b0 2
+b0 9
+1#
+b1001000110100 '
+b1001000110100 .
+b1001000110100 7
+b0 $
+b0 -
+b0 5
+#1000
+0#
+#1100
+1#
+#1200
+0#
+#1300
+1#
+#1400
+0#
+0&
+#1500
+1#
+#1600
+0#
+#1700
+1#
+#1800
+0#
+#1900
+13
+1#
+0%
+#2000
+0#
+#2100
+b1001000110100 "
+b1001000110100 2
+b1001000110100 9
+b1001000110100 !
+b1001000110100 1
+b1001000110100 :
+1#
+#2200
+0#
+#2300
+1#
+#2400
+03
+0#
+1%
+#2500
+1#
+#2600
+0#
+#2700
+1#
+#2800
+0#
+#2900
+b0 "
+b0 2
+b0 9
+1#
+b1 $
+b1 -
+b1 5
+1&
+#3000
+0#
+#3100
+1#
+#3200
+0#
+#3300
+1#
+#3400
+0#
+b1010101111001101 +
+b1010101111001101 0
+b1010101111001101 8
+b1 (
+b1 /
+b1 6
+#3500
+b0 !
+b0 1
+b0 :
+1#
+#3600
+0#
+#3700
+1#
+#3800
+0#
+#3900
+14
+1#
+0*
+#4000
+0#
+#4100
+b1010101111001101 "
+b1010101111001101 2
+b1010101111001101 9
+b1010101111001101 !
+b1010101111001101 1
+b1010101111001101 :
+1#
+#4200
+0#
+#4300
+1#
+#4400
+0#
+#4500
+1#
+#4600
+0#
+#4700
+1#
+#4800
+0#
+#4900
+1#

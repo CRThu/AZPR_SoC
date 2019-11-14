@@ -12,7 +12,7 @@ module rom_top_tb;
     /*  bus  */
     reg cs_n = `DISABLE_;
     reg as_n = `DISABLE_;
-    reg [`ROM_ADDR_BUS] addr=0;
+    reg [`ROM_ADDR_BUS] addr = 0;
     wire [`WORD_DATA_BUS] rd_data;
     wire rdy_n;
 
@@ -34,12 +34,29 @@ module rom_top_tb;
     always
         #10 clk = ~clk;
 
+    integer i;
+    
     /*  testbench  */
     initial
     begin
         $dumpfile("rom_top.vcd");
         $dumpvars(0,rom_top_tb);
         
+        /*  set rom data to zero  */
+        for(i=0;i<`ROM_DEPTH;i=i+1)
+        begin
+            rom_top_01.sprom_01.rom_block[i] = 0;
+        end
+
+        /*  load data  */
+        $readmemh("./rom_tb.dat",rom_top_01.sprom_01.rom_block);
+
+
+        for(i=0;i<11;i=i+1)
+        begin
+            $display("addr = 0x%h,\tdata = 0x%h;",i,rom_top_01.sprom_01.rom_block[i]);
+        end
+
         #50 reset = `RESET_DISABLE;
         cs_n  = `ENABLE_;
         as_n = `ENABLE_;

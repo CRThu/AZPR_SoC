@@ -6,7 +6,7 @@
     `define NEGATIVE_RESET
 
     /*  choose MEMORY polarity  */
-    // `define POSITIVE_MEMORY
+    `define POSITIVE_MEMORY
     // `define NEGATIVE_MRMORY
 
     /*  Enable I/O Modules  */
@@ -29,8 +29,8 @@
 
     /*  generate MEM_ENABLE & MEM_DISABLE  */
     // `ifdef POSITIVE_MEMORY
-    //     `define MEM_ENABLE    1'b1
-    //     `define MEM_DISABLE   1'b0
+        `define MEM_ENABLE    1'b1
+        `define MEM_DISABLE   1'b0
     // `elif NEGATIVE_MRMORY
     //     `define MEM_ENABLE    1'b0
     //     `define MEM_DISABLE   1'b1
