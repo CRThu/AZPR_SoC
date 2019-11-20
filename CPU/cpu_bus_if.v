@@ -6,7 +6,7 @@
 `include "./CPU/cpu_def.v"
 
 // book is wrong??? (p112-wire->reg)
-module bus_if(
+module cpu_bus_if(
     /*  clk & reset  */
     input wire clk,
     input wire reset,
@@ -43,12 +43,9 @@ module bus_if(
     output reg [`WORD_DATA_BUS] bus_wr_data
 );
 
-    /*  bus  */
     reg [1:0] state;
-    /*  read buffer  */
-    reg [31:0] rd_buf;
-    /*  bus slave index  */
-    wire [2:0] s_index;
+    reg [31:0] rd_buf;  /*  read buffer  */
+    wire [2:0] s_index; /*  bus slave index  */
 
     /*  SPM Control  */
     /*  Bus Slave Index  */
@@ -57,6 +54,7 @@ module bus_if(
     assign spm_addr = addr;
     assign spm_rw = rw;
     assign spm_wr_data = wr_data;
+    
     /*  SPM Access Control  */
     always @(*)
     begin
@@ -203,7 +201,4 @@ module bus_if(
             endcase
         end
     end
-
-
-
 endmodule // bus_if

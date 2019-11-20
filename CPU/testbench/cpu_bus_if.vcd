@@ -1,0 +1,286 @@
+$date
+	Wed Nov 20 12:02:53 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module cpu_bus_if_tb $end
+$var wire 32 ! spm_wr_data [31:0] $end
+$var wire 1 " spm_rw $end
+$var wire 1 # spm_as_n $end
+$var wire 30 $ spm_addr [29:0] $end
+$var wire 32 % rd_data [31:0] $end
+$var wire 1 & busy $end
+$var wire 32 ' bus_wr_data [31:0] $end
+$var wire 1 ( bus_rw $end
+$var wire 1 ) bus_req_n $end
+$var wire 1 * bus_as_n $end
+$var wire 30 + bus_addr [29:0] $end
+$var reg 30 , addr [29:0] $end
+$var reg 1 - as_n $end
+$var reg 1 . bus_grnt_n $end
+$var reg 32 / bus_rd_data [31:0] $end
+$var reg 1 0 bus_rdy_n $end
+$var reg 1 1 clk $end
+$var reg 1 2 flush $end
+$var reg 1 3 reset $end
+$var reg 1 4 rw $end
+$var reg 32 5 spm_rd_data [31:0] $end
+$var reg 1 6 stall $end
+$var reg 32 7 wr_data [31:0] $end
+$scope module cpu_bus_if_01 $end
+$var wire 30 8 addr [29:0] $end
+$var wire 1 - as_n $end
+$var wire 1 . bus_grnt_n $end
+$var wire 32 9 bus_rd_data [31:0] $end
+$var wire 1 0 bus_rdy_n $end
+$var wire 1 1 clk $end
+$var wire 1 2 flush $end
+$var wire 1 3 reset $end
+$var wire 1 4 rw $end
+$var wire 30 : spm_addr [29:0] $end
+$var wire 32 ; spm_rd_data [31:0] $end
+$var wire 1 " spm_rw $end
+$var wire 32 < spm_wr_data [31:0] $end
+$var wire 1 6 stall $end
+$var wire 32 = wr_data [31:0] $end
+$var wire 3 > s_index [2:0] $end
+$var reg 30 ? bus_addr [29:0] $end
+$var reg 1 * bus_as_n $end
+$var reg 1 ) bus_req_n $end
+$var reg 1 ( bus_rw $end
+$var reg 32 @ bus_wr_data [31:0] $end
+$var reg 1 & busy $end
+$var reg 32 A rd_buf [31:0] $end
+$var reg 32 B rd_data [31:0] $end
+$var reg 1 # spm_as_n $end
+$var reg 2 C state [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx C
+b0 B
+bx A
+bx @
+bx ?
+bx >
+b100100011010001010110 =
+b100100011010001010110 <
+b1000110100010101100111 ;
+bx :
+b1101000101011001111000 9
+bx 8
+b100100011010001010110 7
+06
+b1000110100010101100111 5
+14
+13
+02
+01
+10
+b1101000101011001111000 /
+1.
+1-
+bx ,
+bx +
+x*
+x)
+x(
+bx '
+0&
+b0 %
+bx $
+1#
+1"
+b100100011010001010110 !
+$end
+#100
+11
+#200
+01
+#300
+11
+#400
+01
+03
+#410
+b0 A
+b0 '
+b0 @
+1(
+1*
+b0 +
+b0 ?
+1)
+b0 C
+#500
+11
+#600
+01
+#700
+11
+#800
+01
+13
+#900
+11
+#1000
+01
+#1100
+11
+#1200
+b1 >
+01
+b1000000000000000000000000000 $
+b1000000000000000000000000000 :
+b1000000000000000000000000000 ,
+b1000000000000000000000000000 8
+#1300
+11
+#1400
+01
+#1500
+11
+#1600
+b1000110100010101100111 %
+b1000110100010101100111 B
+0#
+01
+0-
+#1700
+11
+#1800
+01
+#1900
+11
+#2000
+1&
+1#
+b0 %
+b0 B
+b10 >
+01
+b10000000000000001001000110100 $
+b10000000000000001001000110100 :
+b10000000000000001001000110100 ,
+b10000000000000001001000110100 8
+#2100
+11
+#2110
+1&
+b100100011010001010110 '
+b100100011010001010110 @
+b10000000000000001001000110100 +
+b10000000000000001001000110100 ?
+0)
+b1 C
+#2200
+01
+#2300
+11
+#2400
+01
+0.
+#2500
+11
+#2510
+1&
+0*
+b10 C
+#2600
+01
+#2700
+11
+#2710
+1*
+#2800
+b1101000101011001111000 %
+b1101000101011001111000 B
+0&
+01
+16
+00
+#2900
+11
+#2910
+b1101000101011001111000 %
+b1101000101011001111000 B
+b11 C
+b1101000101011001111000 A
+b0 '
+b0 @
+b0 +
+b0 ?
+1)
+#3000
+01
+#3100
+11
+#3200
+b1101000101011001111000 %
+b1101000101011001111000 B
+01
+06
+#3300
+11
+#3310
+1&
+b0 %
+b0 B
+b0 C
+#3400
+01
+#3500
+11
+#3510
+1&
+b100100011010001010110 '
+b100100011010001010110 @
+b10000000000000001001000110100 +
+b10000000000000001001000110100 ?
+0)
+b1 C
+#3600
+01
+#3700
+11
+#3710
+b1101000101011001111000 %
+b1101000101011001111000 B
+0&
+0*
+b10 C
+#3800
+01
+#3900
+11
+#3910
+1&
+b0 %
+b0 B
+b0 C
+b0 '
+b0 @
+b0 +
+b0 ?
+1)
+1*
+#4000
+01
+#4100
+11
+#4110
+1&
+b100100011010001010110 '
+b100100011010001010110 @
+b10000000000000001001000110100 +
+b10000000000000001001000110100 ?
+0)
+b1 C
+#4200
+01
